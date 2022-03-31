@@ -1,0 +1,16 @@
+/* tslint:disable */
+import { Injectable } from '@angular/core';
+
+/**
+ * Global configuration for Api services
+ */
+@Injectable({
+  providedIn: 'root',
+})
+export class ApiConfiguration {
+  rootUrl: string = 'https://api.nytimes.com/svc/books/v2';
+}
+
+export interface ApiConfigurationInterface {
+  rootUrl?: string;
+}

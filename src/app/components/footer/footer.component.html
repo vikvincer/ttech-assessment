@@ -1,0 +1,14 @@
+<footer>
+    <ul>
+        <li>
+            <a (click)="toggleForm()" mat-button>Contact us</a>
+        </li>
+    </ul>
+</footer>
+<div class="popup-container"[class.active]="showForm">
+    <div class="form-container">
+        <app-contact-form (closeForm)="contactFormEvent($event)"></app-contact-form>
+    </div>
+</div>
+
+

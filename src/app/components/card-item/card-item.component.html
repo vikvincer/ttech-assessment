@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>{{data.title}}</mat-card-title>
+      <mat-card-subtitle>{{data.byline}}</mat-card-subtitle>
+      <mat-card-subtitle><i>{{data.created_date | date: 'mediumDate' }}</i></mat-card-subtitle>
+
+      <mat-card-subtitle *ngIf="data.opening_date"><small>Opening date: </small><i>{{data.opening_date | date: 'mediumDate' }}</i></mat-card-subtitle>
+      <mat-card-subtitle *ngIf="data.publication_date"><small>Publicaton date: </small><i>{{data.publication_date | date: 'mediumDate' }}</i></mat-card-subtitle>
+
+      <ng-container *ngIf="data?.multimedia?.length">
+        <img mat-card-xl-image [src]="data?.multimedia[0]?.url" >
+      </ng-container>
+      <ng-container *ngIf="!data?.multimedia">
+        <img mat-card-xl-image src="assets/placeholder-image.png" >
+      </ng-container>
+
+     
+
+
+    </mat-card-title-group>
+    <mat-card-content [innerHtml]="data.abstract">
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,16 @@
+<header>
+    <div class="logo">
+        <h1>nytimes</h1>
+    </div>
+    <nav>
+        <ul>
+            <ng-container *ngFor="let nav of navigationList">
+                <li>
+                    <a mat-button [routerLink]="[nav.path]"  [routerLinkActive]="['active']"
+                    [routerLinkActiveOptions]="{ exact: true }">{{nav.label}}</a>
+                </li>
+            </ng-container>
+        </ul>
+    </nav>
+</header>
+

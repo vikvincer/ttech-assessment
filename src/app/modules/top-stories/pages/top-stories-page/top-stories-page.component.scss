@@ -1,0 +1,21 @@
+.content {
+    height: calc(100vh - 64px);
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::webkit-scrollbar  {
+        display: none;
+    }
+}
+.container {
+    padding: 20px 0;
+    color: #191616;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+mat-form-field {
+    margin-bottom: 10px;
+}
