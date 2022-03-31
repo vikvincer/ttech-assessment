@@ -1,0 +1,23 @@
+
+<app-page-header [title]="pageTitle">
+
+</app-page-header>
+<div class="container">
+  <mat-form-field appearance="fill" [formGroup]="selectSectionForm">
+    <mat-label>Select section</mat-label>
+    <mat-select formControlName="selectSectionField">
+      <mat-option *ngFor="let selection of sectionListSelectionArray" [value]="selection.value">
+        {{selection.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <cdk-virtual-scroll-viewport #scroller itemSize="100" class="content">
+    <div>
+      <ng-container *cdkVirtualFor="let item of paginatedListItems; let i = index">
+        <div class="item">
+          <app-card-item [data]="item"></app-card-item>
+        </div>
+      </ng-container>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

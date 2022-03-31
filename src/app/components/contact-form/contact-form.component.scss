@@ -1,0 +1,37 @@
+.full-width{
+    width: 100%;
+    text-align: center;
+}
+
+.top-padding{
+    padding-top: 3px;
+}
+
+.margin-left mat-radio-button:not(:first-child){
+    margin-left:10px;
+}
+
+.form-container{
+    margin: 100px auto;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 14px;
+}
+
+.field-container {
+    margin-bottom: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card-actions {
+    text-align: center;
+}
+
+.thank-you {
+    text-align: center;
+}

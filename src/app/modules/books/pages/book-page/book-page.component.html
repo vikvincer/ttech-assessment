@@ -1,0 +1,34 @@
+<app-page-header [title]="pageTitle">
+    <div class="controls-container">
+        <mat-form-field [formGroup]="searchSelectForm" appearance="fill" >
+            <mat-label>Search by</mat-label>
+            <mat-select formControlName="selectSearchField">
+              <mat-option *ngFor="let sort of searchByList" [value]="sort.value">
+                {{sort.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="search-box">
+            <form [formGroup]="searchBarForm">
+              <input formControlName="searchInputField" type="search" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</app-page-header>
+
+<div class="container">
+    <cdk-virtual-scroll-viewport #scroller itemSize="10" class="content">
+        <div>
+          <ng-container *cdkVirtualFor="let item of paginatedListItems; let i = index">
+            <div class="item">
+              <app-card-item [data]="item">tERST</app-card-item>
+            </div>
+          </ng-container>
+        </div>
+        <div class="alerts" >
+          <h1 *ngIf="loading">Loading</h1>
+          <h1  *ngIf="!loading && !paginatedListItems?.length">No data</h1>
+      </div>
+      </cdk-virtual-scroll-viewport>
+
+  </div>

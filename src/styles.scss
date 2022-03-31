@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+* { box-sizing: border-box;}
+ /* So the width will be 100% + 17px */
+
+mat-form-field {
+    // margin-bottom: 10px;
+    background: #424242;
+    .mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
+    .mat-form-field-underline {
+        display: none;
+    }
+    .mat-focused {
+        color: #fff;
+    }
+    .mat-primary {
+        color: #fff !important;
+    }
+    .mat-form-field-label, .mat-select-arrow .mat-option-text{
+        color: #fff !important;
+    }
+}
+
+.search-box {
+    height: 52px;
+    background: #555;
+    padding: 10px 15px; 
+    input {
+        font-size: 14px;
+        height: 33px;
+        padding: 5px;
+        outline: none;
+        border-radius: 3px;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border: 1px solid #777676;
+        background: #cfcece;
+        color: #191616;
+        width: 200px;
+    }
+}
+
+.alerts {
+    text-align: center;
+    margin-top: 10%;
+}
